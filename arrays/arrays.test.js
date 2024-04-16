@@ -173,6 +173,18 @@ describe("Tests", () => {
       args: [animals],
       expected: 5280, //cow * chicken... = (2+3) * (4+7) ...
     },
+    {
+      title: "can get the max value in several strings",
+      fn: ArrayUtil.getTheMax,
+      args: [["2 4 1 5 1 9 2 4 1", "0 3 1 4 1 6 2 5 1", "5 1 2 3 5 1 20 0 12"]],
+      expected: 20,
+    },
+    {
+      title: "can get the sum of max value in each string",
+      fn: ArrayUtil.getTheSumOfMax,
+      args: [["2 4 1 5 1 9 2 4 1", "0 3 1 4 1 6 2 5 1", "5 1 2 3 5 1 20 0 12"]],
+      expected: 35, //9 + 6 + 20
+    },
   ];
 
   tests.forEach((test) => {

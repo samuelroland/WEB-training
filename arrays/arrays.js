@@ -43,4 +43,10 @@ export class ArrayUtil {
   static countLettersAndIndexesProduct() {
     // TODO
   }
+  static getThexMax() {
+    // TODO
+  }
+  static getTheSumOfMax() {
+    // TODO
+  }
 }
