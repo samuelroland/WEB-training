@@ -21,6 +21,15 @@ describe("Tests", () => {
       },
     },
     {
+      title: "can create a huge array x elements filled with y (2)",
+      fn: ArrayUtil.hugeArray,
+      args: [12, 59],
+      expectation: (result) => {
+        expect(result.length).to.eq(12);
+        expect(result[Math.ceil(Math.random() * 12)]).to.eq(59);
+      },
+    },
+    {
       title:
         "can push back values and remove at front (push 4 times 10 and pop front 2 times)",
       fn: ArrayUtil.pushAndRemove,
@@ -57,16 +66,6 @@ describe("Tests", () => {
       fn: ArrayUtil.extractRange,
       args: [[3, 1, 5, 6, 7, 2, 6, 1, 5, 2, 3, 6, 2, 3, 1, 5], 6, 3],
       expected: [6, 7, 2, 6, 1, 5, 2, 3, 6, 2, 3],
-    },
-
-    {
-      title: "can create a huge array x elements filled with y",
-      fn: ArrayUtil.hugeArray,
-      args: [12, 59],
-      expectation: (result) => {
-        expect(result.length).to.eq(12);
-        expect(result[Math.ceil(Math.random() * 12)]).to.eq(59);
-      },
     },
     {
       title: "can uppercase and reverse the array",
@@ -132,10 +131,8 @@ describe("Tests", () => {
       title: "can parse two lines of exo syntax into an exo object",
       fn: ArrayUtil.parseExoWIP,
       args: [
-        [
-          "Exo:   What is the best OS ? That's a very neutral question...  " +
-            " \t \n\nSolution:  GNU/Linux   ",
-        ],
+        "Exo:   What is the best OS ?\n That's a very neutral question...  " +
+          " \t \n\nSolution:  GNU/Linux   ",
       ],
       expected: {
         title: "What is the best OS ?",
@@ -173,6 +170,18 @@ describe("Tests", () => {
       fn: ArrayUtil.countLettersAndIndexesProduct,
       args: [animals],
       expected: 5280, //cow * chicken... = (2+3) * (4+7) ...
+    },
+    {
+      title: "can get the max value in several strings",
+      fn: ArrayUtil.getTheMax,
+      args: [["2 4 1 5 1 9 2 4 1", "0 3 1 4 1 6 2 5 1", "5 1 2 3 5 1 20 0 12"]],
+      expected: 20,
+    },
+    {
+      title: "can get the sum of max value in each string",
+      fn: ArrayUtil.getTheSumOfMax,
+      args: [["2 4 1 5 1 9 2 4 1", "0 3 1 4 1 6 2 5 1", "5 1 2 3 5 1 20 0 12"]],
+      expected: 35, //9 + 6 + 20
     },
   ];
 

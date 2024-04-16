@@ -19,9 +19,6 @@ export class ArrayUtil {
   static extractRange() {
     // TODO
   }
-  static hugeArray() {
-    // TODO
-  }
   static upperCaseAndReverse() {
     // TODO
   }
@@ -44,6 +41,12 @@ export class ArrayUtil {
     // TODO
   }
   static countLettersAndIndexesProduct() {
+    // TODO
+  }
+  static getThexMax() {
+    // TODO
+  }
+  static getTheSumOfMax() {
     // TODO
   }
 }
