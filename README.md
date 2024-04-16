@@ -1,13 +1,19 @@
 # WEB-training
 Small WEB exos to train HTML, CSS and JavaScript
 
-## Exo styling
+My solutions can be found in the `solution` branch as separated file named `solution.js` or `solution.html`.
 
-Install the Live Server extension in VSCode, open `index.html` and start designing this page:
+## Exo styling
+Folder: `styling`
+
+Install the Live Server extension in VSCode, open `styling/index.html` and start designing this page:
 
 ![styling.png](imgs/styling.png)
 
+TODO: make the page train flexbox and grid
+
 ## Arrays manipulation
+Folder: `arrays`
 
 Install NPM dependencies
 ```sh
