@@ -3,7 +3,6 @@ export class ArrayUtil {
   //TODO: some methods take some arguments, look at the tests
   static getEmptyArray() {
     // TODO
-    return [];
   }
   static hugeArray() {
     // TODO
@@ -15,6 +14,9 @@ export class ArrayUtil {
     // TODO
   }
   static removeInValueRange() {
+    // TODO
+  }
+  static extractRange() {
     // TODO
   }
   static hugeArray() {

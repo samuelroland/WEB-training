@@ -51,6 +51,13 @@ describe("Tests", () => {
       args: [animals, "cat", "coooow"],
       expected: animals,
     },
+    {
+      title:
+        "can extract a subrange of values (between index of first occurence of first arg, and last index of second arg included)",
+      fn: ArrayUtil.extractRange,
+      args: [[3, 1, 5, 6, 7, 2, 6, 1, 5, 2, 3, 6, 2, 3, 1, 5], 6, 3],
+      expected: [6, 7, 2, 6, 1, 5, 2, 3, 6, 2, 3],
+    },
 
     {
       title: "can create a huge array x elements filled with y",
