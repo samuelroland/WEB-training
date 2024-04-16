@@ -59,11 +59,23 @@ export class ArrayUtil {
   }
 
   static parseExoWIP(text) {
-    return {
-      title: "What is the best OS ?",
-      instruction: "That's a very neutral question...",
-      solution: "GNU/Linux",
-    };
+    const lines = text.split("\n");
+    const exo = { instruction: "" };
+    const TITLE_PREFIX = "Exo:";
+    const SOLUTION_PREFIX = "Solution:";
+
+    for (const line of lines) {
+      if (line.startsWith(TITLE_PREFIX)) {
+        exo.title = line.substr(TITLE_PREFIX.length).trim();
+      } else if (line.startsWith(SOLUTION_PREFIX)) {
+        exo.solution = line.substr(SOLUTION_PREFIX.length).trim();
+      } else {
+        exo.instruction += line;
+      }
+    }
+
+    exo.instruction = exo.instruction.trim();
+    return exo;
   }
 
   static countAnyWords(list) {
