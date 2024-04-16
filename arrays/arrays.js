@@ -19,9 +19,6 @@ export class ArrayUtil {
   static extractRange() {
     // TODO
   }
-  static hugeArray() {
-    // TODO
-  }
   static upperCaseAndReverse() {
     // TODO
   }
