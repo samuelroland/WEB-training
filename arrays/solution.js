@@ -86,4 +86,15 @@ export class ArrayUtil {
   static countLettersAndIndexesProduct(list) {
     return list.reduce((acc, el, i) => acc * (el.length + i), 1);
   }
+
+  static getTheMax(list) {
+    return Math.max(
+      ...list.flatMap((l) => l.split(" ").map((e) => parseInt(e)))
+    );
+  }
+  static getTheSumOfMax(list) {
+    return list
+      .map((l) => Math.max(...l.split(" ").map((e) => parseInt(e))))
+      .reduce((acc, curr) => acc + curr, 0);
+  }
 }
