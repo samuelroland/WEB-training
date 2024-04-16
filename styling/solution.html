@@ -1,0 +1,93 @@
+<!-- This is a possible working solution, not necessarly the best. A lot of possible solutions will also be good and correct. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Styling</title>
+	<style>
+		button {
+			padding: 5px;
+			background-color: rgb(15, 221, 142);
+			border: none;
+			border-radius: 5px;
+			margin-right: 20px;
+		}
+
+		#menu {
+			display: flex;
+			justify-content: end;
+		}
+
+		#slogan {
+			padding: 30px;
+			margin: 10px;
+			background-color: rgba(223, 200, 245, 0.555);
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		#slogan h1 {
+			text-align: center;
+			font-size: 3rem;
+			color: blueviolet;
+		}
+
+		#slogan h2 {
+			font-style: italic;
+		}
+
+		.chocolate {
+			height: 100px;
+			margin: 0px 30px;
+		}
+
+		#reader {
+			margin: auto;
+			max-width: 700px;
+			padding: 20px;
+			border: dashed 2px blue;
+		}
+
+		.flex {
+			display: flex;
+		}
+	</style>
+</head>
+
+<body>
+	<nav id="menu">
+		<button>Home</button>
+		<button class="selected">Blog</button>
+		<button>About</button>
+	</nav>
+
+	<div id="slogan">
+		<div class="flex">
+			<img src="chocolate.png" alt="" class="chocolate">
+			<h1>I like chocolate !</h1>
+			<img src="chocolate.png" alt="" class="chocolate">
+		</div>
+		<h2>That's how my life can be resumed...</h2>
+	</div>
+
+	<article id="reader">
+		<h2>Latest article</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus corporis optio maiores sit expedita. A
+			quaerat animi fuga, expedita assumenda dolores sapiente incidunt. Laudantium reprehenderit reiciendis
+			blanditiis
+			omnis sed rerum.</p>
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam magnam molestiae maiores. Tenetur nostrum
+			praesentium culpa atque dolorem, illo ullam fuga libero, totam quia officia exercitationem consequuntur eum,
+			vel
+			debitis.</p>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officia, velit rerum? Deserunt enim distinctio hic,
+			earum perspiciatis, libero nobis voluptatem fugiat laudantium at cupiditate illum quia quibusdam recusandae
+			vel.
+			Animi?</p>
+	</article>
+</body>
+
+</html>
