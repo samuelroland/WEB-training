@@ -131,10 +131,8 @@ describe("Tests", () => {
       title: "can parse two lines of exo syntax into an exo object",
       fn: ArrayUtil.parseExoWIP,
       args: [
-        [
-          "Exo:   What is the best OS ? That's a very neutral question...  " +
-            " \t \n\nSolution:  GNU/Linux   ",
-        ],
+        "Exo:   What is the best OS ?\n That's a very neutral question...  " +
+          " \t \n\nSolution:  GNU/Linux   ",
       ],
       expected: {
         title: "What is the best OS ?",
