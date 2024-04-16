@@ -1,6 +1,7 @@
 // Vitest tests as training exos to train a lot on array
-import { describe, it, expect, fail } from "vitest";
+import { describe, it, expect } from "vitest";
 import { ArrayUtil } from "./arrays";
+import { fail } from "assert";
 
 describe("Tests", () => {
   const animals = ["cat", "dog", "cow", "chimp", "chicken"];
@@ -169,10 +170,11 @@ describe("Tests", () => {
   ];
 
   tests.forEach((test) => {
-    if (typeof test.fn !== "function")
-      fail("method for the test '" + test.title + "' has not been defined ...");
-
     it(test.title, () => {
+      if (typeof test.fn !== "function")
+        fail(
+          "method has not been defined for the test '" + test.title + "' ..."
+        );
       if (test.expected) {
         expect(test.fn(...(test.args ?? []))).to.deep.equal(test.expected);
       } else test.expectation(test.fn(...(test.args ?? [])));
