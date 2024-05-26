@@ -2,3 +2,4 @@ node_modules
 drawing.html
 test.js
 debug.log
+.vite

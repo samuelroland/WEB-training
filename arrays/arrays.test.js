@@ -1,6 +1,6 @@
 import { exo } from './helper';
 import * as fns from './arrays.js';
-import { expect, it } from 'vitest';
+import { expect } from 'vitest';
 
 // Useful constants to work with
 const animals = ['cat', 'dog', 'cow', 'chimp', 'chicken'];
