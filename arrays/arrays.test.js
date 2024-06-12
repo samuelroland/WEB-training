@@ -13,28 +13,29 @@ exo({
 });
 
 function checkHugeArray(result, x, y) {
-	expect(result?.length, 'Length is not correct').to.eq(x);
-	const randomIndex = Math.ceil(Math.random() * x - 1);
-	expect(result[randomIndex], 'Value at randomIndex=' + randomIndex + ' is not correct').to.eq(y);
+    expect(result?.length, 'Length is not correct').to.eq(x);
+    const randomIndex = Math.ceil(Math.random() * x - 1);
+    expect(result[randomIndex], 'Value at randomIndex=' + randomIndex + ' is not correct').to.eq(y);
 }
 
 exo({
-	title: 'Create a huge array x elements filled with y',
-	fn: fns.hugeFilledArray,
-	tests: [
-		{
-			args: [100, 6],
-			expect: (result) => {
-				checkHugeArray(result, 100, 6);
-			}
-		},
-		{
-			args: [12, 59],
-			expect: (result) => {
-				checkHugeArray(result, 12, 59);
-			}
-		}
-	]
+    title: 'Create a huge array x elements filled with y',
+    instruction: 'This should be a one liner!!',
+    fn: fns.hugeFilledArray,
+    tests: [
+        {
+            args: [100, 6],
+            expect: (result) => {
+                checkHugeArray(result, 100, 6);
+            }
+        },
+        {
+            args: [12, 59],
+            expect: (result) => {
+                checkHugeArray(result, 12, 59);
+            }
+        }
+    ]
 });
 
 exo({

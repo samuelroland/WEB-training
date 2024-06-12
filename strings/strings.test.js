@@ -16,3 +16,8 @@ exo({
 	fn: fns.countOccurencesOfChar,
 	tests: [{ args: [PANGRAM, 'o'], expected: 4 }]
 });
+exo({
+    title: 'Count length of each word',
+    fn: fns.countLengthOfWords,
+    tests: [{ args: [PANGRAM], expected: [3, 5, 5, 3, 5, 4, 3, 4, 3] }]
+});
