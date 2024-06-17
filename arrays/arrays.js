@@ -1,52 +1,61 @@
-// A class with static methods to train array manipulation in JS
-export class ArrayUtil {
-  //TODO: some methods take some arguments, look at the tests
-  static getEmptyArray() {
+// Learn array manipulations, run these exos with PRJS
+
+export function getEmptyArray() {
     // TODO
-  }
-  static hugeArray() {
+}
+
+export function hugeFilledArray(size, value) {
     // TODO
-  }
-  static pushAndRemove() {
+}
+
+export function pushAndRemove(array, pushTimes, pushValue, popFrontTimes) {
     // TODO
-  }
-  static getLastAlphabeticalOrder() {
+}
+
+export function getLastOfAlphabeticalOrder(array) {
     // TODO
-  }
-  static removeInValueRange() {
+}
+
+export function removeInValueRange(array, first, last) {
     // TODO
-  }
-  static extractRange() {
+}
+
+export function extractRange(array, start, end) {
     // TODO
-  }
-  static upperCaseAndReverse() {
+}
+
+export function upperCaseAndReverse(array) {
     // TODO
-  }
-  static filterByInclude() {
+}
+
+export function filterByInclude(array, filter) {
     // TODO
-  }
-  static filterHello() {
+}
+
+export function filterHello(array) {
     // TODO
-  }
-  static filterHello2() {
+}
+
+export function filterHello2(array) {
     // TODO
-  }
-  static filterCodes() {
+}
+
+export function filterCodes(array) {
     // TODO
-  }
-  static parseExoWIP() {
+}
+
+export function countAnyWords(deepArray) {
     // TODO
-  }
-  static countAnyWords() {
+}
+
+export function productOfWords(array) {
     // TODO
-  }
-  static countLettersAndIndexesProduct() {
+}
+
+export function getTheMax(array) {
     // TODO
-  }
-  static getThexMax() {
+}
+
+export function getTheSumOfMax(array) {
     // TODO
-  }
-  static getTheSumOfMax() {
-    // TODO
-  }
 }
