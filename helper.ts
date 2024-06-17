@@ -22,7 +22,7 @@ function runTest(t, fn) {
     const result = fn(...(t.args ?? []));
     if (result === undefined) throw Error('No returned value in ' + fn.name);
 
-    if (t.expected) {
+    if (t.expected === undefined) {
         expect(result).to.deep.equal(t.expected);
     } else t.expect(result);
 }
