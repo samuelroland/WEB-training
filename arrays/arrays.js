@@ -1,3 +1,5 @@
+// Learn array manipulations, run these exos with PRJS
+
 export function getEmptyArray() {
     // TODO
 }
@@ -42,10 +44,6 @@ export function filterCodes(array) {
     // TODO
 }
 
-export function parseExoWIP(rawExo) {
-    // TODO
-}
-
 export function countAnyWords(deepArray) {
     // TODO
 }
@@ -59,5 +57,5 @@ export function getTheMax(array) {
 }
 
 export function getTheSumOfMax(array) {
-// TODO
+    // TODO
 }
