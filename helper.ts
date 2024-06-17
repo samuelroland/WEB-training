@@ -22,9 +22,12 @@ function runTest(t, fn) {
     const result = fn(...(t.args ?? []));
     if (result === undefined) throw Error('No returned value in ' + fn.name);
 
-    if (t.expected === undefined) {
+    if ('expected' in t) {
         expect(result).to.deep.equal(t.expected);
-    } else t.expect(result);
+    }
+    if ('expect' in t) {
+        t.expect(result);
+    }
 }
 
 // Abstraction to declaratively define an exo
