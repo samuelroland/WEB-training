@@ -1,112 +1,84 @@
-// A class with static methods to train array manipulation in JS
-export class ArrayUtil {
-  //TODO: create static methods here to make all tests green !
+// Learn array manipulations, run these exos with PRJS
 
-  static getEmptyArray() {
+export function getEmptyArray() {
     return [];
-  }
+}
 
-  static hugeArray(size, value) {
+export function hugeFilledArray(size, value) {
     return new Array(size).fill(value);
-  }
+}
 
-  static pushAndRemove(list, toPush, pushTimes, toShift) {
-    list.push(...new Array(toPush).fill(pushTimes));
-    for (let i = 0; i < toShift; ++i) {
-      list.shift();
+export function pushAndRemove(array, pushTimes, pushValue, popFrontTimes) {
+    array.push(...new Array(pushTimes).fill(pushValue));
+    for (let i = 0; i < popFrontTimes; ++i) {
+        array.shift();
     }
-    return list;
-  }
+    return array;
+}
 
-  static getLastAlphabeticalOrder(list) {
-    return list.sort()[list.length - 1];
-  }
+export function getLastOfAlphabeticalOrder(array) {
+    return array.sort()[array.length - 1];
+}
 
-  static removeInValueRange(list, first, second) {
-    const firstIndex = list.indexOf(first);
-    const secondIndex = list.indexOf(second);
-    if (firstIndex == -1 || secondIndex == -1) return list;
+export function removeInValueRange(array, first, last) {
+    const firstIndex = array.indexOf(first);
+    const secondIndex = array.indexOf(last);
+    if (firstIndex == -1 || secondIndex == -1) return array;
 
-    list.splice(firstIndex, secondIndex - firstIndex + 1);
-    return list;
-  }
+    array.splice(firstIndex, secondIndex - firstIndex + 1);
+    return array;
+}
 
-  static extractRange(list, first, last) {
-    return list.slice(list.indexOf(first), list.lastIndexOf(last) + 1);
-  }
+export function extractRange(array, start, end) {
+    return array.slice(array.indexOf(start), array.lastIndexOf(end) + 1);
+}
 
-  static upperCaseAndReverse(list) {
-    return list.reverse().map((e) => e.toUpperCase());
-  }
+export function upperCaseAndReverse(array) {
+    return array.reverse().map((e) => e.toUpperCase());
+}
 
-  static filterByInclude(list, snippet) {
-    return list.filter((e) => e.includes(snippet));
-  }
+export function filterByInclude(array, filter) {
+    return array.filter((e) => e.includes(filter));
+}
 
-  static filterHello(list) {
+export function filterHello(array) {
     const re = /hi{1,3}o?/;
-    return list.filter((e) => re.test(e));
-  }
+    return array.filter((e) => re.test(e));
+}
 
-  static filterHello2(list) {
+export function filterHello2(array) {
     const re = /^hi{1,3}o?$/;
-    return list.filter((e) => re.test(e));
-  }
+    return array.filter((e) => re.test(e));
+}
 
-  static filterCodes(list) {
+export function filterCodes(array) {
     const re = /^[a-e]{0,3}(\d|[0-4]\d)$/;
-    return list.filter((e) => re.test(e));
-  }
+    return array.filter((e) => re.test(e));
+}
 
-  static parseExoWIP(text) {
-    const lines = text.split("\n");
-    const exo = { instruction: "" };
-    const TITLE_PREFIX = "Exo:";
-    const SOLUTION_PREFIX = "Solution:";
-
-    for (const line of lines) {
-      if (line.startsWith(TITLE_PREFIX)) {
-        exo.title = line.substr(TITLE_PREFIX.length).trim();
-      } else if (line.startsWith(SOLUTION_PREFIX)) {
-        exo.solution = line.substr(SOLUTION_PREFIX.length).trim();
-      } else {
-        exo.instruction += line;
-      }
-    }
-
-    exo.instruction = exo.instruction.trim();
-    return exo;
-  }
-
-  static countAnyWords(list) {
-    const words = list
-      .flat()
-      .reduce((acc, el) => acc.concat(el.split(/[-_\s]/)), []);
+export function countAnyWords(deepArray) {
+    const words = deepArray.flat().reduce((acc, el) => acc.concat(el.split(/[-_\s]/)), []);
 
     const counters = {};
     for (const word of words) {
-      if (word.trim() == "") continue;
-      if (!counters[word]) {
-        counters[word] = 0;
-      }
-      counters[word]++;
+        if (word.trim() == '') continue;
+        if (!counters[word]) {
+            counters[word] = 0;
+        }
+        counters[word]++;
     }
 
     return counters;
-  }
+}
 
-  static countLettersAndIndexesProduct(list) {
-    return list.reduce((acc, el, i) => acc * (el.length + i), 1);
-  }
+export function productOfWords(array) {
+    return array.reduce((acc, el, i) => acc * (el.length + i), 1);
+}
 
-  static getTheMax(list) {
-    return Math.max(
-      ...list.flatMap((l) => l.split(" ").map((e) => parseInt(e)))
-    );
-  }
-  static getTheSumOfMax(list) {
-    return list
-      .map((l) => Math.max(...l.split(" ").map((e) => parseInt(e))))
-      .reduce((acc, curr) => acc + curr, 0);
-  }
+export function getTheMax(array) {
+    return Math.max(...array.flatMap((l) => l.split(' ').map((e) => parseInt(e))));
+}
+
+export function getTheSumOfMax(array) {
+    return array.map((l) => Math.max(...l.split(' ').map((e) => parseInt(e)))).reduce((acc, curr) => acc + curr, 0);
 }
