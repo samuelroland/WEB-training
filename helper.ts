@@ -1,5 +1,5 @@
 import { fail } from 'assert';
-import { assert, expect, test } from 'vitest';
+import { expect, test } from 'vitest';
 
 export type ReturnTest = {
     args?: any[];
@@ -21,10 +21,10 @@ export type Exo = {
 
 async function runTest(t: AdvancedTest | ReturnTest, fn: Function, exo: Exo) {
     let result = fn(...(t.args ?? []));
-    assert(result !== undefined, 'No returned value in ' + fn.name);
+    expect(result !== undefined, 'No returned value in ' + fn.name).toBe(true);
 
     if (exo.async === true) {
-        assert(result instanceof Promise, 'Value returned by ' + fn.name + ' is not a promise, the function need to be async.');
+        expect(result instanceof Promise, 'Value returned by ' + fn.name + ' is not a promise, the function need to be async.').toBe(true);
         result = await result;
     }
 
