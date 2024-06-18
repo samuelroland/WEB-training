@@ -1,9 +1,9 @@
 import { fail } from 'assert';
-import { expect, test } from 'vitest';
+import { assert, expect, test } from 'vitest';
 
 export type ReturnTest = {
-	args?: any[];
-	expected: any;
+    args?: any[];
+    expected: any;
 };
 
 export type AdvancedTest = {
@@ -14,13 +14,19 @@ export type AdvancedTest = {
 export type Exo = {
     title: string;
     instruction?: string;
+    async?: boolean;
     fn: (...any) => any;
     tests: (ReturnTest | AdvancedTest)[];
 };
 
-function runTest(t, fn) {
-    const result = fn(...(t.args ?? []));
-    if (result === undefined) throw Error('No returned value in ' + fn.name);
+async function runTest(t: AdvancedTest | ReturnTest, fn: Function, exo: Exo) {
+    let result = fn(...(t.args ?? []));
+    assert(result !== undefined, 'No returned value in ' + fn.name);
+
+    if (exo.async === true) {
+        assert(result instanceof Promise, 'Value returned by ' + fn.name + ' is not a promise, the function need to be async.');
+        result = await result;
+    }
 
     if ('expected' in t) {
         expect(result).to.deep.equal(t.expected);
@@ -32,8 +38,9 @@ function runTest(t, fn) {
 
 // Abstraction to declaratively define an exo
 export function exo(exo: Exo) {
-    test(exo.title, ({ task }) => {
+    test(exo.title, async ({ task }) => {
         try {
+            // @ts-ignore
             task.meta = { exo: { functionName: exo.fn?.name, ...JSON.parse(JSON.stringify(exo)) } };
         } catch (error) {
             console.log(error);
@@ -43,6 +50,6 @@ export function exo(exo: Exo) {
 
         if (!exo.tests) fail('No test has been defined for exo ' + exo.title);
 
-        exo.tests.forEach((t) => runTest(t, exo.fn));
+        await Promise.all(exo.tests.map((t) => runTest(t, exo.fn, exo)));
     });
 }
