@@ -72,7 +72,7 @@ exo({
 exo({
     // GOAL: learn .substr()
     title: 'Extract a 3 chars code starting with 0x',
-    instruction: 'Do not use the same method than before to avoid using any index calculation...',
+    instruction: 'Do not use the same method than before to avoid using any calculation on indexes...',
     fn: fns.extractACode,
     tests: [
         { args: ["The secret code 0xJSX, don't tell anyone."], expected: '0xJSX' },
@@ -82,7 +82,7 @@ exo({
 
 exo({
     // GOAL: learn .concat()
-    title: 'Concat 2 strings with a separator in between',
+    title: 'Concat several strings at once',
     instruction: "But do NOT use '+'...",
     fn: fns.concatStrings,
     tests: [{ args: ['100', ' / ', '500', ' = 1/5'], expected: '100 / 500 = 1/5' }]
