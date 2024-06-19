@@ -15,7 +15,7 @@ exo({
 function checkHugeArray(result, x, y) {
     expect(result?.length, 'Length is not correct').to.eq(x);
     const randomIndex = Math.ceil(Math.random() * x - 1);
-    expect(result[randomIndex], 'Value at randomIndex=' + randomIndex + ' is not correct').to.eq(y);
+    expect(result[randomIndex], 'Value at randomIndex=' + randomIndex + ' is ' + result[randomIndex] + ' but should be ' + y).to.eq(y);
 }
 
 exo({
@@ -40,7 +40,7 @@ exo({
 
 exo({
     title: 'Push back values and remove at front',
-    instruction: 'Here we will push 4 times 10 and pop front 2 times',
+    instruction: "Here, we want to push 4 times '10' and pop front 2 times",
     fn: fns.pushAndRemove,
     tests: [
         {
@@ -70,7 +70,7 @@ exo({
 });
 
 exo({
-    title: 'remove element between 2 given values',
+    title: 'Remove element between 2 given values',
     fn: fns.removeInValueRange,
     tests: [
         {
@@ -91,18 +91,27 @@ exo({
 });
 
 exo({
-    title: 'Extract a subrange of values (between index of first occurence of first arg, and last index of second arg included)',
+    title: 'Extract a subrange of values',
+    instruction: 'The range to extract starts at the index of first occurence of second arg, and stops at the last index of third arg (included).',
     fn: fns.extractRange,
     tests: [
         {
             args: [[3, 1, 5, 6, 7, 2, 6, 1, 5, 2, 3, 6, 2, 3, 1, 5], 6, 3],
             expected: [6, 7, 2, 6, 1, 5, 2, 3, 6, 2, 3]
+        },
+        {
+            args: [[6, 2, 6, 7, 8, 2, 6, 13, 6, 3], 13, 3],
+            expected: [13, 3]
+        },
+        {
+            args: [[6, 2, 6, 7, 10, 3], 6, 6],
+            expected: [6, 2, 6]
         }
     ]
 });
 
 exo({
-    title: 'uppercase and reverse the array',
+    title: 'Uppercase and reverse the array',
     fn: fns.upperCaseAndReverse,
     tests: [
         {
@@ -113,7 +122,7 @@ exo({
 });
 
 exo({
-    title: 'filter an array basically',
+    title: 'Filter an array basically',
     fn: fns.filterByInclude,
     tests: [
         {
@@ -124,7 +133,8 @@ exo({
 });
 
 exo({
-    title: 'filter an array with a regex (h then i between 1 and 3 times and optionnaly an o)',
+    title: 'Filter an array with a regex',
+    instruction: 'Here, we want to filter with the following pattern: h + (i between 1 and 3 times) + (optionnaly an o)',
     fn: fns.filterHello,
     tests: [
         {
@@ -135,18 +145,20 @@ exo({
 });
 
 exo({
-    title: 'filter an array with a regex (like before but regex must match entire word)',
+    title: 'Filter an array with full match',
+    instruction: 'Like previous exo, but the regex should must match the full string, not just something inside.',
     fn: fns.filterHello2,
     tests: [
         {
-            args: [['hi', 'hiii', 'hiiio', 'h', 'hiiii', 'ho', 'io', 'here hiiio and something else']],
+            args: [['hi', 'hiii', 'hiiio', 'h', 'hiiioK', ' hio', 'hhii', 'ho', 'io', 'here hiiio and something else']],
             expected: ['hi', 'hiii', 'hiiio']
         }
     ]
 });
 
 exo({
-    title: 'filter an array with a more complex regex (0 to 3 letters between a and e, then numbers under 50)',
+    title: 'Filter an array with a complex regex',
+    instruction: "The pattern is: 0 to 3 letters between a and e, then numbers under 50.\nAll parameters until 'b03' match the pattern.",
     fn: fns.filterCodes,
     tests: [
         {
@@ -173,7 +185,7 @@ exo({
 });
 
 exo({
-    title: 'count words separated by strange separators',
+    title: 'Count words separated by strange separators in deep array',
     fn: fns.countAnyWords,
     tests: [
         {
@@ -196,7 +208,7 @@ exo({
 
 exo({
     title: "Calculate the 'product of words'",
-    instruction: 'The product of word is simply a calculation of string length + index value.\nExample: [cow, chicken, ...] = (2+3) * (4+7) * ... = 5280\nNote: Do this in a single method call !',
+    instruction: 'The calculation is: string length + index value.\nExample: [cow, chicken, ...] = (2+3) * (4+7) * ... = 5280\nNote: Do this in a single method call !',
     fn: fns.productOfWords,
     tests: [
         {
@@ -224,6 +236,10 @@ exo({
         {
             args: [['2 4 1 5 1 9 2 4 1', '0 3 1 4 1 6 2 5 1', '5 1 2 3 5 1 20 0 12']],
             expected: 35
+        },
+        {
+            args: [['3 0 2 5 1 7 29 5 29 5 6 8 12 22']],
+            expected: 29
         }
     ],
     instruction: 'The calculation is: 9 + 6 + 20 = 35'
