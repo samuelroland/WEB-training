@@ -2,6 +2,9 @@
 
 Emoji are fun but they are sometimes hard to find or compare. Let's make a simple emoji browser to easily list, search, copy and bookmark emojis !
 
+![demo](demo.gif)
+
+
 ## Goal
 1. Train writing basic React components but with help on where to write what
 1. Train fetch requests
@@ -49,9 +52,6 @@ We have:
 ```
 
 <!-- TODO: tree output after bookmark update -->
-
-**Final result view**
-![demo](demo.gif)
 
 ## Instruction
 

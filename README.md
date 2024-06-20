@@ -37,6 +37,15 @@ The `--bail 1` make the runner stop at first fail so you can see output of faile
 
 </details>
 
+### Remoji
+Training of React and doing fetch requests.
+
+![demo](remoji/demo.gif)
+
+See more in [remoji/remoji.md](remoji/remoji.md)
+
+A basic working but imperfect solution is available in the `solution` branch too. By the way, you can quickly see the diff with `git diff  main..solution remoji`.
+
 ### Styling
 Folder: `styling`  
 The goal is to train designing a small web page in pure CSS to train a few concepts like colors, border, backgrounds, margins, padding, placement, basic tags, css selection, ...
