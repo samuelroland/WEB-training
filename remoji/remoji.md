@@ -4,11 +4,11 @@ Emoji are fun but they are sometimes hard to find or compare. Let's make a simpl
 
 ## Context
 We have:
-1. The frontend: a React SPA (Single Page Application) developed in TypeScript
-1. The backend: an ExpressJS server in TypeScript too
-1. The GitHub API as a source for the emojis
+1. The frontend: a React SPA (Single Page Application) developed in TypeScript. Runs on `localhost:3000`.
+1. The backend: an ExpressJS server in TypeScript too. Runs on `localhost:8080`.
+1. The GitHub API as a source for the emojis (on `api.github.com`).
 
-To limit the amount of unecessary requests to the GitHub API (it is rate limited obviously), we will load them all once in the backend when the client ask for it.
+To limit the amount of unecessary requests to the GitHub API (it is rate limited obviously), we will load them all once in the backend when the client ask for it. If the client ask them again, we used the cached version, we don't do load them from GitHub again.
 
 ![architecture diagram](architecture.png)
 
