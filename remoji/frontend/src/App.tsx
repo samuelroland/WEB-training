@@ -1,7 +1,10 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from 'react';
+import EmojiBlock from './components/EmojiBlock';
+import { Emoji } from './types';
+import EmojiList from './components/EmojiList';
+import Search from './components/Search';
 
+const API = 'http://localhost:8080';
 function App() {
   return (
     <div className="App">
