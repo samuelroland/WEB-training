@@ -35,7 +35,10 @@ code {
     background-color: #6fa63b;
 }
 
-.box {
+.emoji-box {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin: 20px;
 }
 
@@ -55,13 +58,13 @@ code {
 }
 
 .flex {
-	display: flex;
+    display: flex;
 }
 
 .justify-center {
-	justify-content: center;
+    justify-content: center;
 }
 
 .items-center {
-	align-items: center;
+    align-items: center;
 }

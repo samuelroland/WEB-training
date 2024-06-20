@@ -9,7 +9,6 @@ const BACKEND = 'http://localhost:8080'; //le lien du backend à prefixer avant 
 const LIMITS: number[] = [10, 20, 50, 100]; //toutes les valeurs des limites à afficher sous forme de boutons
 
 function App() {
-      <header className="App-header">
     // TODO: gérer les variables "réactives" pour l'état de chargement, la liste des emojis affichées, la limite choisie (une parmi LIMITS)
     // evtl la recherche actuelle et l'emoji aléatoire (affiché à gauche du titre)
 
@@ -26,13 +25,13 @@ function App() {
     return (
         <div className="App">
             <header className="flex justify-center items-center">
-                {/* TODO: afficher un émoji aléatoire ici (voir route backend dédiée et composant dédié) */}
+                {/* TODO: afficher un émoji aléatoire ici (voir route backend dédiée et composant dédié). On ne doit pas afficher son nom !*/}
                 <h1 id="title">Remoji - a simple emoji browser</h1>
             </header>
             <div>
                 <div>
                     <span>Show </span>
-                    {/* TODO: Afficher les options ici avec la classe 'limit', et la classe selected en plus quand nécessaire */}
+                    {/* TODO: Afficher les LIMITS ici avec la classe 'limit', et la classe selected en plus quand nécessaire */}
                     <span>emojis</span>
                 </div>
                 {/* TODO: Inclure les composants Search et EmojiList */}

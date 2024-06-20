@@ -1,14 +1,6 @@
 import { Emoji } from '../types';
 import EmojiBlock from './EmojiBlock';
 
-export default function EmojiList({ emojis, loading }: { emojis: Emoji[]; loading: boolean }) {
-    return (
-        <div className="box" style={{ display: 'flex', justifyContent: 'center' }}>
-            {loading && <div style={{ fontStyle: 'italic' }}>Loading emojis from backend...</div>}
-
-            {emojis.map((e) => (
-                <EmojiBlock key={e.name} emoji={e}></EmojiBlock>
-            ))}
-        </div>
-    );
-}
+// TODO: Créer un composant EmojiList, prenant une liste d'emojis et le statut de chargement
+// Il doit afficher les emojis et un message 'Loading emojis from backend...' quand ce statut est vrai
+// Utiliser .emoji-box sur la div autour et un style italic sur le texte de chargement

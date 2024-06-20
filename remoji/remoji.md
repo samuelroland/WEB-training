@@ -57,6 +57,14 @@ We have:
 
 **Note: bookmarks are not implemented in solution for now...**
 
+Here the basic data structure in `types.ts`.
+```typescript
+export type Emoji = {
+    name: string;
+    link: string;
+};
+```
+
 Implement the following features:
 1. Complete all TODOs in components in `src/components` before touching to App
 1. When the page loads, the first N it should show the first N emojis and let the user change N (10, 20, 50, 100) with simple buttons. By default, it should be 10.
