@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
-import EmojiBlock from './components/EmojiBlock';
 import { Emoji } from './types';
 import EmojiList from './components/EmojiList';
 import Search from './components/Search';
+import EmojiImage from './components/EmojiImage';
 
-const API = 'http://localhost:8080';
+// Constantes utiles
+const BACKEND = 'http://localhost:8080'; //le lien du backend à prefixer avant les requêtes fetch
+const LIMITS: number[] = [10, 20, 50, 100]; //toutes les valeurs des limites à afficher sous forme de boutons
+
 function App() {
   return (
     <div className="App">
@@ -24,6 +27,8 @@ function App() {
       </header>
     </div>
   );
+    // TODO: gérer les variables "réactives" pour l'état de chargement, la liste des emojis affichées, la limite choisie (une parmi LIMITS)
+    // evtl la recherche actuelle et l'emoji aléatoire (affiché à gauche du titre)
 }
 
 export default App;

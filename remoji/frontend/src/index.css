@@ -22,7 +22,7 @@ code {
     color: #6ea63b;
 }
 
-.option {
+.limit {
     padding: 5px 10px;
     border: 1px solid;
     border-radius: 10%;
@@ -31,7 +31,7 @@ code {
     margin: 0px 5px;
 }
 
-.option.selected {
+.limit.selected {
     background-color: #6fa63b;
 }
 
@@ -52,4 +52,16 @@ code {
 
 .emoji-block:hover {
     background-color: rgba(118, 174, 65, 0.151);
+}
+
+.flex {
+	display: flex;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.items-center {
+	align-items: center;
 }
