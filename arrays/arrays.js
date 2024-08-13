@@ -1,61 +1,61 @@
 // Learn array manipulations, run these exos with PRJS
 
 export function getEmptyArray() {
-    // TODO
+  // TODO
 }
 
 export function hugeFilledArray(size, value) {
-    // TODO
+  // TODO
 }
 
 export function pushAndRemove(array, pushTimes, pushValue, popFrontTimes) {
-    // TODO
+  // TODO
 }
 
 export function getLastOfAlphabeticalOrder(array) {
-    // TODO
+  // TODO
 }
 
 export function removeInValueRange(array, first, last) {
-    // TODO
+  // TODO
 }
 
 export function extractRange(array, start, end) {
-    // TODO
+  // TODO
 }
 
 export function upperCaseAndReverse(array) {
-    // TODO
+  // TODO
 }
 
 export function filterByInclude(array, filter) {
-    // TODO
+  // TODO
 }
 
 export function filterHello(array) {
-    // TODO
+  // TODO
 }
 
 export function filterHello2(array) {
-    // TODO
+  // TODO
 }
 
 export function filterCodes(array) {
-    // TODO
+  // TODO
 }
 
 export function countAnyWords(deepArray) {
-    // TODO
+  // TODO
 }
 
 export function productOfWords(array) {
-    // TODO
+  // TODO
 }
 
 export function getTheMax(array) {
-    // TODO
+  // TODO
 }
 
 export function getTheSumOfMax(array) {
-    // TODO
+  // TODO
 }

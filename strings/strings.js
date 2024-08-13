@@ -1,81 +1,81 @@
 // Learn string manipulations, run these exos with PRJS
 
 export function getNumberOfChars(text) {
-    // TODO
+  // TODO
 }
 
 export function getLowercaseVersion(text) {
-    // TODO
+  // TODO
 }
 
 export function getFirstIndex(text, substring) {
-    // TODO
+  // TODO
 }
 
 export function getFirstIndexButAfter(text, substring, startPos) {
-    // TODO
+  // TODO
 }
 
 export function countOccurencesOfChar(text, char) {
-    // TODO
+  // TODO
 }
 
 export function containsAGivenWord(text, word) {
-    // TODO
+  // TODO
 }
 
 export function extractAMessage(text) {
-    // TODO
+  // TODO
 }
 
 export function extractACode(text) {
-    // TODO
+  // TODO
 }
 
 export function concatStrings(str1, str2, str3, str4) {
-    // TODO
+  // TODO
 }
 
 export function extractAllNumbers(text) {
-    // TODO
+  // TODO
 }
 
 export function buildAcronym(fullname) {
-    // TODO
+  // TODO
 }
 
 export function countLengthOfWords(sentence) {
-    // TODO
+  // TODO
 }
 
 export function getSomeFilesInGitignore(base64Content, extension) {
-    // TODO
+  // TODO
 }
 
 export function getFromJSON(text) {
-    // TODO
+  // TODO
 }
 
 export function transformToJSON(obj) {
-    // TODO
+  // TODO
 }
 
 export function checkJsonValidity(text) {
-    // TODO
+  // TODO
 }
 
 export function myLatestAnimal(talk, animal) {
-    // TODO
+  // TODO
 }
 
 export function replaceFirstAndAll(sentence, first, firstReplace, all, allReplace) {
-    // TODO
+  // TODO
 }
 
 export function parseExoWIP(raw) {
-    // TODO
+  // TODO
 }
 
 export function parseParameters(command) {
-    // TODO
+  // TODO
 }
