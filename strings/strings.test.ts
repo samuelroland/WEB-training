@@ -1,4 +1,4 @@
-import { exo } from '../helper';
+import { exo } from '@delibay/prjs';
 import * as fns from './strings.js';
 
 // Useful constants to work with

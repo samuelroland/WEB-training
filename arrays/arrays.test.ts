@@ -1,4 +1,4 @@
-import { exo } from '../helper';
+import { exo } from '@delibay/prjs';
 import * as fns from './arrays.js';
 import { expect } from 'vitest';
 
