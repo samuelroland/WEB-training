@@ -4,10 +4,6 @@
 My solutions can be found in the `solution` branch as separated file named `solution.js` or `solution.html`.
 
 
-Before anything, start by installing NPM dependencies:
-```sh
-npm install
-```
 <!-- todo: how to make PRJS work without this step ? -->
 
 ## Available exos
@@ -17,7 +13,14 @@ Here is the current list of available exos, each exos suite is stored in its ded
 - `styling`: a small web page to design in pure CSS
 
 ### JS exos
-Once you installed PRJS, you can simply run `prjs` and start doing the exos. Type `l`, then select the exos suite with `j` and `k`, go right with `l` and type `enter` to enter the details of an exo. You will see the error and if you start coding and hit Ctrl+S, it should refresh the view. When you are done, you can go the next exo with `n` or go back to the previous with `p`.
+
+Install dependencies (this includes PRJS and Vitest, this needs to be done just once) and run prjs
+```sh
+npm install
+npx prjs
+```
+
+Running `npx prjs` will start PRJS in full screen, you can start practicing! Type `l` to see skills and exos lists, select the appropriate skill with `j` and `k`, go right with `l`, use `j` or `k` again to select an exo, and finally type `enter` to enter the details of an exo. You will see the starting error, you can start your editor in the repos folder, open the single JS file present for this skill in the right folder, if you start coding and hit Ctrl+S, it will refresh the view. When you are done, you can go the next exo with `n` or go back to the previous with `p`.
 
 ![prjs list of exos on arrays and strings](imgs/prjs-list.png)
 ![prjs details of the exo with error on the returned list](imgs/prjs-details.png)
