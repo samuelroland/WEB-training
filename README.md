@@ -3,7 +3,6 @@
 
 My solutions can be found in the `solution` branch as separated file named `solution.js` or `solution.html`.
 
-
 <!-- todo: how to make PRJS work without this step ? -->
 
 ## Available exos
@@ -21,6 +20,8 @@ npx prjs
 ```
 
 Running `npx prjs` will start PRJS in full screen, you can start practicing! Type `l` to see skills and exos lists, select the appropriate skill with `j` and `k`, go right with `l`, use `j` or `k` again to select an exo, and finally type `enter` to enter the details of an exo. You will see the starting error, you can start your editor in the repos folder, open the single JS file present for this skill in the right folder, if you start coding and hit Ctrl+S, it will refresh the view. When you are done, you can go the next exo with `n` or go back to the previous with `p`.
+
+**Note for WSL2 users**: do not clone the repository under the Windows filesystem (anything under `/mnt/`) because "file changed events" are not transfered from Windows filesystem to WSL2, the watch mode will not work in this case. Make sure this repository in under the Linux filesystem (under `/home/<user>`) so events can be listened by PRJS and it can run tests again and refresh the UI.
 
 ![prjs list of exos on arrays and strings](imgs/prjs-list.png)
 ![prjs details of the exo with error on the returned list](imgs/prjs-details.png)
